@@ -14,8 +14,13 @@ import CategoryPage from "./Pages/CategoryPage";
 export default function App() {
   const { fetchBlogPosts } = useContext(AppContext);
 
+    // current value access kar sakte hai
+  // search parameter in query string
+  
+  // value change kar sakte hai or update
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
+  // used to access current location
 
   useEffect(() => {
     const page =  searchParams.get("page") ?? 1;
@@ -33,6 +38,8 @@ export default function App() {
       fetchBlogPosts(Number(page));
     }
   }, [location.pathname, location.search]);
+  // it will be render or fetchBlogPosts function call when 
+  // path or page change page found by search params
 
   return (
     <Routes>

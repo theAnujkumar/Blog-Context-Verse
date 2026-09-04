@@ -10,6 +10,7 @@ const TagPage = () => {
     const navigation = useNavigate();
     const location = useLocation();
     const tag = location.pathname.split("/").at(-1);
+    // url ke last me tag ki value pde honge
   return (
     <div>
         <Header/>

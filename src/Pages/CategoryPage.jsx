@@ -10,6 +10,7 @@ const CategoryPage = () => {
     const location = useLocation();
     const category = location.pathname.split("/").at(-1);
 
+    // url ke last me category ki value pde honge
   return (
     <div>
       <Header/>

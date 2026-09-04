@@ -17,6 +17,7 @@ const BlogPage = () => {
 
     const blogId = location.pathname.split("/").at(-1);
 
+    // here we handle api call from blogid
     async function fetchRelatedBlogs() {
         setLoading(true);
         let url = `${newBaseUrl}get-blog?blogId=${blogId}`;
